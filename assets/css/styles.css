@@ -1,0 +1,242 @@
+/* Mobile-first styles for Matrix Colorist website */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    min-height: 100vh;
+}
+
+/* Header styles */
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    max-width: 150px;
+    margin-bottom: 10px;
+}
+
+.header h1 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.header p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Navigation buttons */
+.nav-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.nav-button {
+    padding: 12px;
+    background-color: #000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.nav-button:hover, .nav-button.active {
+    background-color: #333;
+}
+
+/* Contact section */
+.contact-section {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.contact-section h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.whatsapp-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    background-color: #25D366;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.whatsapp-icon {
+    width: 24px;
+    height: 24px;
+}
+
+/* Catalog section */
+.catalog-section {
+    margin-bottom: 20px;
+}
+
+.catalog-section h2 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Services catalog */
+.services-catalog, .products-catalog {
+    display: none;
+}
+
+.services-catalog.active, .products-catalog.active {
+    display: block;
+    animation: fadeIn 0.5s;
+}
+
+/* Product line */
+.product-line {
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.product-line-header {
+    padding: 12px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.product-line-header h3 {
+    font-size: 1.1rem;
+    margin-right: auto;
+}
+
+.brief-description {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 5px;
+    width: 100%;
+}
+
+.product-line-content {
+    display: none;
+    padding: 15px;
+    background-color: white;
+}
+
+.product-line-content.active {
+    display: block;
+    animation: slideDown 0.3s;
+}
+
+.product-description {
+    margin-bottom: 10px;
+}
+
+/* Product item */
+.product-item {
+    display: flex;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.product-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.product-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.product-details {
+    flex: 1;
+}
+
+.product-details h4 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.product-details p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.product-price {
+    font-weight: bold;
+    color: #000;
+    text-align: right;
+}
+
+/* Service item */
+.service-item {
+    margin-bottom: 15px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.service-name {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.service-description {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.service-price {
+    font-weight: bold;
+    text-align: right;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideDown {
+    from { max-height: 0; opacity: 0; }
+    to { max-height: 1000px; opacity: 1; }
+}
