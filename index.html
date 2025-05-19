@@ -4,90 +4,436 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Татьяна Стафиевская - Колорист Matrix</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
+    <!-- Menu Icon -->
+    <div class="menu-icon">
+        <div class="menu-icon-bar"></div>
+        <div class="menu-icon-bar"></div>
+        <div class="menu-icon-bar"></div>
+    </div>
+
+    <!-- Menu Dropdown -->
+    <div class="menu-dropdown">
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="#" id="menu-services">Price</a></li>
+            <li><a href="#" id="menu-products">Продукция Matrix</a></li>
+        </ul>
+    </div>
+
+    <div class="top-banner active">
+        <img src="чб.JPEG" alt="Татьяна Стафиевская - Колорист Matrix" class="banner-image">
+    </div>
+    <div class="author-banner">
+        <h2 class="author-title">Авторская студия Татьяны Стафиевской</h2>
+        <p class="author-subtitle">Амбассадор бренда Matrix. Hair-stylist. Colorist.</p>
+    </div>
+    <img src="фото продукции\main.jpg" alt="Matrix Products" class="products-main-image">
     <div class="container">
-        <!-- Header Section -->
-        <header class="header">
-            <img src="assets/images/logo.svg" alt="Татьяна Стафиевская Logo" class="logo">
-            <h1>Татьяна Стафиевская</h1>
-            <p>Колорист Matrix, Алматы</p>
-        </header>
+        <!-- Main Page Content -->
+        <div id="main-page" class="page active">
+            <!-- Super Sync Collection 2024 Carousel -->
+            <h3 class="carousel-title">Super Sync Collection 2024</h3>
+            <div class="carousel-container" id="carousel-1">
+                <div class="carousel-track">
+                    <div class="carousel-slide">
+                        <img src="supersync1.jpg" alt="Super Sync 1" class="carousel-image">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="supersync2.jpg" alt="Super Sync 2" class="carousel-image">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="supersync3.jpg" alt="Super Sync 3" class="carousel-image">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="supersync4.jpg" alt="Super Sync 4" class="carousel-image">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="supersync5.JPG" alt="Super Sync 5" class="carousel-image">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="supersync6.JPG" alt="Super Sync 6" class="carousel-image">
+                    </div>
+                </div>
+                <div class="carousel-indicators">
+                    <span class="carousel-indicator active" data-index="0"></span>
+                    <span class="carousel-indicator" data-index="1"></span>
+                    <span class="carousel-indicator" data-index="2"></span>
+                    <span class="carousel-indicator" data-index="3"></span>
+                    <span class="carousel-indicator" data-index="4"></span>
+                    <span class="carousel-indicator" data-index="5"></span>
+                </div>
+                <div class="carousel-arrow-left" id="carousel-prev-1"></div>
+                <div class="carousel-arrow" id="carousel-next-1"></div>
+            </div>
 
-        <!-- Navigation Buttons -->
-        <div class="nav-buttons">
-            <button id="services-button" class="nav-button active">Услуги</button>
-            <button id="products-button" class="nav-button">Продукция Matrix</button>
+            <!-- Tonal Control Collection 2024 Carousel -->
+            <h3 class="carousel-title">Tonal Control Collection 2024</h3>
+            <div class="carousel-container" id="carousel-2">
+                <div class="carousel-track">
+                    <div class="carousel-slide">
+                        <img src="whitehair1.jpg" alt="White Hair 1" class="carousel-image">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="whitehair2.JPG" alt="White Hair 2" class="carousel-image">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="whitehair3.jpg" alt="White Hair 3" class="carousel-image">
+                    </div>
+                </div>
+                <div class="carousel-indicators">
+                    <span class="carousel-indicator active" data-index="0"></span>
+                    <span class="carousel-indicator" data-index="1"></span>
+                    <span class="carousel-indicator" data-index="2"></span>
+                </div>
+                <div class="carousel-arrow-left" id="carousel-prev-2"></div>
+                <div class="carousel-arrow" id="carousel-next-2"></div>
+            </div>
+
+            <!-- Matrix Ambassadors Contest Carousel -->
+            <h3 class="carousel-title">Matrix Ambassadors Contest</h3>
+            <div class="carousel-container" id="carousel-3">
+                <div class="carousel-track">
+                    <div class="carousel-slide">
+                        <img src="redhair1.JPG" alt="Red Hair 1" class="carousel-image">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="redhair2.JPG" alt="Red Hair 2" class="carousel-image">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="redhair3.JPG" alt="Red Hair 3" class="carousel-image">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="redhair4.JPG" alt="Red Hair 4" class="carousel-image">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="redhair5.JPG" alt="Red Hair 5" class="carousel-image">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="redhair6.JPG" alt="Red Hair 6" class="carousel-image">
+                    </div>
+                </div>
+                <div class="carousel-indicators">
+                    <span class="carousel-indicator active" data-index="0"></span>
+                    <span class="carousel-indicator" data-index="1"></span>
+                    <span class="carousel-indicator" data-index="2"></span>
+                    <span class="carousel-indicator" data-index="3"></span>
+                    <span class="carousel-indicator" data-index="4"></span>
+                    <span class="carousel-indicator" data-index="5"></span>
+                </div>
+                <div class="carousel-arrow-left" id="carousel-prev-3"></div>
+                <div class="carousel-arrow" id="carousel-next-3"></div>
+            </div>
+
+            <!-- Matrix Color Awards 2020 Carousel -->
+            <h3 class="carousel-title">Matrix Color Awards 2020</h3>
+            <div class="carousel-container" id="carousel-4">
+                <div class="carousel-track">
+                    <div class="carousel-slide">
+                        <img src="pinkhair1.jpg" alt="Pink Hair 1" class="carousel-image">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="pinkhair2.jpg" alt="Pink Hair 2" class="carousel-image">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="pinkhair3.jpg" alt="Pink Hair 3" class="carousel-image">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="pinkhair5.jpg" alt="Pink Hair 5" class="carousel-image">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="pinkhair6.jpg" alt="Pink Hair 6" class="carousel-image">
+                    </div>
+                </div>
+                <div class="carousel-indicators">
+                    <span class="carousel-indicator active" data-index="0"></span>
+                    <span class="carousel-indicator" data-index="1"></span>
+                    <span class="carousel-indicator" data-index="2"></span>
+                    <span class="carousel-indicator" data-index="3"></span>
+                    <span class="carousel-indicator" data-index="4"></span>
+                </div>
+                <div class="carousel-arrow-left" id="carousel-prev-4"></div>
+                <div class="carousel-arrow" id="carousel-next-4"></div>
+            </div>
+
+            <!-- Rainbow Hair Carousel -->
+            <h3 class="carousel-title">Matrix Color Awards 2019</h3>
+            <div class="carousel-container" id="carousel-5">
+                <div class="carousel-track">
+                    <div class="carousel-slide">
+                        <img src="rainbowhair1.jpg" alt="Rainbow Hair 1" class="carousel-image">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="rainbowhair2.jpg" alt="Rainbow Hair 2" class="carousel-image">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="rainbowhair3.jpg" alt="Rainbow Hair 3" class="carousel-image">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="rainbowhair4.jpg" alt="Rainbow Hair 4" class="carousel-image">
+                    </div>
+                </div>
+                <div class="carousel-indicators">
+                    <span class="carousel-indicator active" data-index="0"></span>
+                    <span class="carousel-indicator" data-index="1"></span>
+                    <span class="carousel-indicator" data-index="2"></span>
+                    <span class="carousel-indicator" data-index="3"></span>
+                </div>
+                <div class="carousel-arrow-left" id="carousel-prev-5"></div>
+                <div class="carousel-arrow" id="carousel-next-5"></div>
+            </div>
+
+            <!-- Matrix Color Awards 2019 Carousel -->
+            <h3 class="carousel-title">Matrix Color Awards 2019</h3>
+            <div class="carousel-container" id="carousel-6">
+                <div class="carousel-track">
+                    <div class="carousel-slide">
+                        <img src="nudehair1.jpg" alt="Nude Hair 1" class="carousel-image">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="nudehair2.jpg" alt="Nude Hair 2" class="carousel-image">
+                    </div>
+                </div>
+                <div class="carousel-indicators">
+                    <span class="carousel-indicator active" data-index="0"></span>
+                    <span class="carousel-indicator" data-index="1"></span>
+                </div>
+                <div class="carousel-arrow-left" id="carousel-prev-6"></div>
+                <div class="carousel-arrow" id="carousel-next-6"></div>
+            </div>
         </div>
 
-        <!-- Contact Section -->
-        <div class="contact-section">
-            <h2>Для <span id="contact-purpose">записи</span></h2>
-            <a href="https://wa.me/77058881285" class="whatsapp-button">
-                <img src="assets/images/whatsapp-icon.svg" alt="WhatsApp" class="whatsapp-icon">
-                +7 (705) 888-12-85
-            </a>
-        </div>
-
-        <!-- Catalog Section -->
-        <div class="catalog-section">
-            <h2>Каталог <span id="catalog-title">услуг</span></h2>
+        <!-- Services Page -->
+        <div id="services-page" class="page">
 
             <!-- Services Catalog -->
             <div id="services-catalog" class="services-catalog active">
-                <div class="service-item">
-                    <h3 class="service-name">Окрашивание</h3>
-                    <p class="service-description">Профессиональное окрашивание волос с использованием продукции Matrix</p>
-                    <p class="service-price">от 10 000 ₸</p>
+                <!-- СТРИЖКА Category -->
+                <div class="service-category">
+                    <h3 class="category-title">СТРИЖКА</h3>
+                    <div class="service-list">
+                        <div class="service-row">
+                            <span class="service-name">СТРИЖКА ЖЕНСКАЯ <span class="service-description-inline">(экспресс-укладка)</span></span>
+                            <span class="service-dots"></span>
+                            <span class="service-price">7000</span>
+                        </div>
+
+                        <div class="service-row">
+                            <span class="service-name">СТРИЖКА МУЖСКАЯ</span>
+                            <span class="service-dots"></span>
+                            <span class="service-price">5000</span>
+                        </div>
+
+                        <div class="service-row">
+                            <span class="service-name">СТРИЖКА ГОРЯЧИМИ НОЖНИЦАМИ</span>
+                            <span class="service-dots"></span>
+                            <span class="service-price">10000</span>
+                        </div>
+
+                        <div class="service-row">
+                            <span class="service-name">ПОДРАВНИВАНИЕ <span class="service-description-inline">(одним срезом)</span></span>
+                            <span class="service-dots"></span>
+                            <span class="service-price">5000</span>
+                        </div>
+
+                        <div class="service-row">
+                            <span class="service-name">МЫТЬЕ ГОЛОВЫ С СУШКОЙ</span>
+                            <span class="service-dots"></span>
+                            <span class="service-price">5000</span>
+                        </div>
+
+                        <div class="service-row">
+                            <span class="service-name">СТРИЖКА ЧЕЛКИ</span>
+                            <span class="service-dots"></span>
+                            <span class="service-price">1500</span>
+                        </div>
+
+                        <div class="service-row">
+                            <span class="service-name">УКЛАДКА <span class="service-description-inline">(мытье + средства)</span></span>
+                            <span class="service-dots"></span>
+                            <span class="service-price">7000</span>
+                        </div>
+
+                        <div class="service-row">
+                            <span class="service-name">ЛОКОНЫ</span>
+                            <span class="service-dots"></span>
+                            <span class="service-price">от 10000</span>
+                        </div>
+
+                        <div class="service-row">
+                            <span class="service-name">АФРО-КУДРИ</span>
+                            <span class="service-dots"></span>
+                            <span class="service-price">от 12000</span>
+                        </div>
+
+                        <div class="service-row">
+                            <span class="service-name">ЭКСПРЕСС-ПРИЧЕСКА</span>
+                            <span class="service-dots"></span>
+                            <span class="service-price">от 5000</span>
+                        </div>
+
+                        <div class="service-row">
+                            <span class="service-name">ВЕЧЕРНЯЯ ПРИЧЕСКА</span>
+                            <span class="service-dots"></span>
+                            <span class="service-price">от 10000</span>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="service-item">
-                    <h3 class="service-name">Тонирование</h3>
-                    <p class="service-description">Тонирование волос для придания нужного оттенка</p>
-                    <p class="service-price">от 8 000 ₸</p>
+                <!-- ЛЕЧЕНИЕ ВОЛОС Category -->
+                <div class="service-category">
+                    <h3 class="category-title">ЛЕЧЕНИЕ ВОЛОС</h3>
+                    <div class="service-list">
+                        <div class="service-row">
+                            <span class="service-name">МОЛЛЕКУЛЯРНЫЙ КОКТЕЙЛЬ</span>
+                            <span class="service-dots"></span>
+                            <span class="service-price">10000</span>
+                        </div>
+
+                        <div class="service-row">
+                            <span class="service-name">КЕРАТИНОВОЕ ВЫПРЯМЛЕНИЕ ВОЛОС</span>
+                            <span class="service-dots"></span>
+                            <span class="service-price">от 30000</span>
+                        </div>
+
+                        <div class="service-row">
+                            <span class="service-name">SPA-УХОД</span>
+                            <span class="service-dots"></span>
+                            <span class="service-price">10000</span>
+                        </div>
+
+                        <div class="service-row">
+                            <span class="service-name">РЕКОНСТРУКЦИЯ ВОЛОС</span>
+                            <span class="service-dots"></span>
+                            <span class="service-price">20000</span>
+                        </div>
+
+                        <div class="service-row">
+                            <span class="service-name">УХОД ДЛЯ ВОЛОС К18</span>
+                            <span class="service-dots"></span>
+                            <span class="service-price">25000</span>
+                        </div>
+
+                        <div class="service-row">
+                            <span class="service-name">УХОД ДЛЯ ВОЛОС К18 <span class="service-description-inline">(дополнение к основной процедуре)</span></span>
+                            <span class="service-dots"></span>
+                            <span class="service-price">5000</span>
+                        </div>
+
+                        <div class="service-row">
+                            <span class="service-name">МАСКА ДЛЯ ВОЛОС <span class="service-description-inline">(дополнение к основной процедуре)</span></span>
+                            <span class="service-dots"></span>
+                            <span class="service-price">5000</span>
+                        </div>
+
+                        <div class="service-row">
+                            <span class="service-name">ПИЛИНГ КОЖИ ГОЛОВЫ <span class="service-description-inline">(дополнение к основной процедуре)</span></span>
+                            <span class="service-dots"></span>
+                            <span class="service-price">5000</span>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="service-item">
-                    <h3 class="service-name">Мелирование</h3>
-                    <p class="service-description">Частичное окрашивание прядей для создания эффекта выгоревших волос</p>
-                    <p class="service-price">от 12 000 ₸</p>
-                </div>
+                <!-- ОКРАШИВАНИЕ Category -->
+                <div class="service-category">
+                    <h3 class="category-title">ОКРАШИВАНИЕ</h3>
+                    <div class="service-list">
+                        <div class="service-row">
+                            <span class="service-name">ОКРАШИВАНИЕ/ТОНИРОВАНИЕ В 1 ТОН</span>
+                            <span class="service-dots"></span>
+                            <span class="service-price">от 18 000</span>
+                        </div>
 
-                <div class="service-item">
-                    <h3 class="service-name">Консультация по подбору цвета</h3>
-                    <p class="service-description">Профессиональная консультация по выбору оптимального цвета волос</p>
-                    <p class="service-price">5 000 ₸</p>
+                        <div class="service-row">
+                            <span class="service-name">СЛОЖНОЕ ОКРАШИВАНИЕ <span class="service-description-inline">(омбре/шатуш/балаяж/мелирование)</span></span>
+                            <span class="service-dots"></span>
+                            <span class="service-price">от 45 000</span>
+                        </div>
+
+                        <div class="service-row">
+                            <span class="service-name">РАССВЕТЛЕНИЕ В ТЕХНИКЕ AIRTOUCH</span>
+                            <span class="service-dots"></span>
+                            <span class="service-price">от 70 000</span>
+                        </div>
+
+                        <div class="service-row">
+                            <span class="service-name">ОКРАШИВАНИЕ/ТОНИРОВАНИЕ КОРНЕЙ</span>
+                            <span class="service-dots"></span>
+                            <span class="service-price">от 15 000</span>
+                        </div>
+
+                        <div class="service-row">
+                            <span class="service-name">БЛОНД</span>
+                            <span class="service-dots"></span>
+                            <span class="service-price">от 70 000</span>
+                        </div>
+
+                        <div class="service-row">
+                            <span class="service-name">ВЫХОД ИЗ ЧЕРНОГО</span>
+                            <span class="service-dots"></span>
+                            <span class="service-price">от 70 000</span>
+                        </div>
+
+                        <div class="service-row">
+                            <span class="service-name">КОРРЕКЦИЯ СЛОЖНОГО ОКРАШИВАНИЯ</span>
+                            <span class="service-dots"></span>
+                            <span class="service-price">от 30000</span>
+                        </div>
+
+                        <div class="service-row">
+                            <span class="service-name">КОРНИ</span>
+                            <span class="service-dots"></span>
+                            <span class="service-price">от 25000</span>
+                        </div>
+
+                        <div class="service-row">
+                            <span class="service-name">КОНТУРИНГ</span>
+                            <span class="service-dots"></span>
+                            <span class="service-price">от 30000</span>
+                        </div>
+
+                        <div class="service-row">
+                            <span class="service-name">КИСЛОТНАЯ СМЫВКА HAIR SEKTA</span>
+                            <span class="service-dots"></span>
+                            <span class="service-price">15000</span>
+                        </div>
+
+                        <div class="service-row">
+                            <span class="service-name">БИОЗАВИВКА</span>
+                            <span class="service-dots"></span>
+                            <span class="service-price">15000-50000</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
+        </div>
+
+        <!-- Products Page -->
+        <div id="products-page" class="page">
+            <h2>Продукция Matrix</h2>
+
             <!-- Products Catalog -->
-            <div id="products-catalog" class="products-catalog">
-                <!-- Keep Me Vivid Line -->
+            <div id="products-catalog" class="products-catalog active">
+                <!-- UNBREAK MY BLONDE Line -->
                 <div class="product-line">
                     <div class="product-line-header">
-                        <h3>Keep Me Vivid</h3>
+                        <h3>UNBREAK MY BLONDE</h3>
                         <span class="arrow">▼</span>
-                        <p class="brief-description">Для яркости цвета. Специальная формула сохраняет насыщенность окрашенных волос до 21 дня.</p>
+                        <p class="brief-description">Для восстановления осветленных и поврежденных волос. Специальная формула укрепляет структуру волос и предотвращает ломкость.</p>
                     </div>
+                    <img src="фото продукции\main unbreak.jpg" alt="UNBREAK MY BLONDE" class="product-line-image">
                     <div class="product-line-content">
-                        <p class="product-description">Профессиональная линейка средств для сохранения яркости и насыщенности цвета окрашенных волос. Формула с антиоксидантами защищает от выцветания и сохраняет блеск до 21 дня после окрашивания.</p>
+                        <p class="product-description">Профессиональная линейка средств для восстановления осветленных и поврежденных волос. Формула с комплексом протеинов и кератина укрепляет структуру волос, предотвращает ломкость и возвращает здоровый блеск.</p>
 
                         <div class="product-item">
-                            <img src="assets/images/logo.svg" alt="Шампунь Keep Me Vivid" class="product-image">
+                            <img alt="Шампунь UNBREAK MY BLONDE" class="product-image">
                             <div class="product-details">
-                                <h4>Шампунь Keep Me Vivid</h4>
-                                <p>Бережно очищает и сохраняет яркость цвета</p>
-                                <p>300 мл</p>
-                            </div>
-                            <p class="product-price">5 500 ₸</p>
-                        </div>
-
-                        <div class="product-item">
-                            <img src="assets/images/logo.svg" alt="Кондиционер Keep Me Vivid" class="product-image">
-                            <div class="product-details">
-                                <h4>Кондиционер Keep Me Vivid</h4>
-                                <p>Питает и защищает окрашенные волосы</p>
+                                <h4>UNBREAK MY BLONDE шампунь</h4>
+                                <p>Бережно очищает и восстанавливает осветленные волосы</p>
                                 <p>300 мл</p>
                             </div>
                             <p class="product-price">5 800 ₸</p>
@@ -95,41 +441,151 @@
                     </div>
                 </div>
 
-                <!-- Color Obsessed Line -->
+                <!-- COLOR OBSESSED Line -->
                 <div class="product-line">
                     <div class="product-line-header">
-                        <h3>Color Obsessed</h3>
+                        <h3>COLOR OBSESSED</h3>
                         <span class="arrow">▼</span>
                         <p class="brief-description">Для защиты цвета. Премиальная формула с керамидами предотвращает вымывание цвета и защищает волосы от внешних воздействий.</p>
                     </div>
+                    <img src="assets/images/product-color-obsessed.jpg" alt="COLOR OBSESSED" class="product-line-image">
                     <div class="product-line-content">
                         <p class="product-description">Премиальная линейка средств для интенсивного ухода за окрашенными волосами. Содержит комплекс керамидов и антиоксидантов, которые укрепляют структуру волос, предотвращают вымывание цвета и защищают от негативного воздействия окружающей среды.</p>
 
                         <div class="product-item">
-                            <img src="assets/images/logo.svg" alt="Шампунь Color Obsessed" class="product-image">
+                            <img alt="Кондиционер COLOR OBSESSED" class="product-image">
                             <div class="product-details">
-                                <h4>Шампунь Color Obsessed</h4>
-                                <p>Защищает цвет от вымывания</p>
+                                <h4>COLOR OBSESSED кондиционер</h4>
+                                <p>Увлажняет и защищает окрашенные волосы</p>
                                 <p>300 мл</p>
                             </div>
-                            <p class="product-price">5 200 ₸</p>
+                            <p class="product-price">5 500 ₸</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- KEEP ME VIVID Line -->
+                <div class="product-line">
+                    <div class="product-line-header">
+                        <h3>KEEP ME VIVID</h3>
+                        <span class="arrow">▼</span>
+                        <p class="brief-description">Для яркости цвета. Специальная формула сохраняет насыщенность окрашенных волос до 21 дня.</p>
+                    </div>
+                    <img src="фото продукции\main keep me vivid 2.jpg" alt="KEEP ME VIVID" class="product-line-image">
+                    <div class="product-line-content">
+                        <p class="product-description">Профессиональная линейка средств для сохранения яркости и насыщенности цвета окрашенных волос. Формула с антиоксидантами защищает от выцветания и сохраняет блеск до 21 дня после окрашивания.</p>
+
+                        <div class="product-item">
+                            <img alt="Шампунь KEEP ME VIVID 1л" class="product-image">
+                            <div class="product-details">
+                                <h4>KEEP ME VIVID шампунь</h4>
+                                <p>Бережно очищает и сохраняет яркость цвета</p>
+                                <p>1 л</p>
+                            </div>
+                            <p class="product-price">12 000 ₸</p>
                         </div>
 
                         <div class="product-item">
-                            <img src="assets/images/logo.svg" alt="Кондиционер Color Obsessed" class="product-image">
+                            <img alt="Шампунь KEEP ME VIVID 300мл" class="product-image">
                             <div class="product-details">
-                                <h4>Кондиционер Color Obsessed</h4>
-                                <p>Увлажняет и защищает окрашенные волосы</p>
+                                <h4>KEEP ME VIVID шампунь</h4>
+                                <p>Бережно очищает и сохраняет яркость цвета</p>
+                                <p>300 мл</p>
+                            </div>
+                            <p class="product-price">5 500 ₸</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BRASS OFF Line -->
+                <div class="product-line">
+                    <div class="product-line-header">
+                        <h3>BRASS OFF</h3>
+                        <span class="arrow">▼</span>
+                        <p class="brief-description">Для нейтрализации желтизны. Формула с синими пигментами нейтрализует нежелательные желтые оттенки на осветленных волосах.</p>
+                    </div>
+                    <img src="assets/images/product-brass-off.jpg" alt="BRASS OFF" class="product-line-image">
+                    <div class="product-line-content">
+                        <p class="product-description">Профессиональная линейка средств для нейтрализации нежелательных желтых оттенков на осветленных и мелированных волосах. Формула с синими пигментами эффективно устраняет желтизну и придает волосам холодный оттенок.</p>
+
+                        <div class="product-item">
+                            <img alt="Шампунь BRASS OFF 1л" class="product-image">
+                            <div class="product-details">
+                                <h4>BRASS OFF шампунь</h4>
+                                <p>Нейтрализует желтизну на осветленных волосах</p>
+                                <p>1 л</p>
+                            </div>
+                            <p class="product-price">12 000 ₸</p>
+                        </div>
+
+                        <div class="product-item">
+                            <img alt="Шампунь BRASS OFF 300мл" class="product-image">
+                            <div class="product-details">
+                                <h4>BRASS OFF шампунь</h4>
+                                <p>Нейтрализует желтизну на осветленных волосах</p>
+                                <p>300 мл</p>
+                            </div>
+                            <p class="product-price">5 500 ₸</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SO SILVER Line -->
+                <div class="product-line">
+                    <div class="product-line-header">
+                        <h3>SO SILVER</h3>
+                        <span class="arrow">▼</span>
+                        <p class="brief-description">Для нейтрализации желтизны. Формула с фиолетовыми пигментами нейтрализует желтые оттенки и усиливает холодное сияние светлых волос.</p>
+                    </div>
+                    <img src="assets/images/product-so-silver.jpg" alt="SO SILVER" class="product-line-image">
+                    <div class="product-line-content">
+                        <p class="product-description">Профессиональная линейка средств для ухода за светлыми, седыми и обесцвеченными волосами. Формула с фиолетовыми пигментами нейтрализует желтые оттенки, усиливает холодное сияние и придает волосам серебристый блеск.</p>
+
+                        <div class="product-item">
+                            <img alt="Шампунь SO SILVER 1л" class="product-image">
+                            <div class="product-details">
+                                <h4>SO SILVER шампунь</h4>
+                                <p>Нейтрализует желтизну и усиливает холодное сияние</p>
+                                <p>1 л</p>
+                            </div>
+                            <p class="product-price">12 000 ₸</p>
+                        </div>
+
+                        <div class="product-item">
+                            <img alt="Шампунь SO SILVER 300мл" class="product-image">
+                            <div class="product-details">
+                                <h4>SO SILVER шампунь</h4>
+                                <p>Нейтрализует желтизну и усиливает холодное сияние</p>
                                 <p>300 мл</p>
                             </div>
                             <p class="product-price">5 500 ₸</p>
                         </div>
 
                         <div class="product-item">
-                            <img src="assets/images/logo.svg" alt="Маска Color Obsessed" class="product-image">
+                            <img alt="Кондиционер SO SILVER 1л" class="product-image">
                             <div class="product-details">
-                                <h4>Маска Color Obsessed</h4>
-                                <p>Интенсивное восстановление окрашенных волос</p>
+                                <h4>SO SILVER кондиционер</h4>
+                                <p>Питает и усиливает холодное сияние светлых волос</p>
+                                <p>1 л</p>
+                            </div>
+                            <p class="product-price">13 000 ₸</p>
+                        </div>
+
+                        <div class="product-item">
+                            <img alt="Кондиционер SO SILVER 300мл" class="product-image">
+                            <div class="product-details">
+                                <h4>SO SILVER кондиционер</h4>
+                                <p>Питает и усиливает холодное сияние светлых волос</p>
+                                <p>300 мл</p>
+                            </div>
+                            <p class="product-price">5 800 ₸</p>
+                        </div>
+
+                        <div class="product-item">
+                            <img alt="Маска SO SILVER 200мл" class="product-image">
+                            <div class="product-details">
+                                <h4>SO SILVER маска</h4>
+                                <p>Интенсивно питает и усиливает холодное сияние</p>
                                 <p>200 мл</p>
                             </div>
                             <p class="product-price">6 800 ₸</p>
@@ -137,34 +593,552 @@
                     </div>
                 </div>
 
-                <!-- Total Results Line -->
+                <!-- HIGH AMPLIFY Line -->
                 <div class="product-line">
                     <div class="product-line-header">
-                        <h3>Total Results</h3>
+                        <h3>HIGH AMPLIFY</h3>
                         <span class="arrow">▼</span>
-                        <p class="brief-description">Для ежедневного ухода. Универсальная линейка с питательными компонентами для всех типов волос, придающая здоровый блеск и облегчающая расчесывание.</p>
+                        <p class="brief-description">Для объема. Формула с протеинами придает волосам объем и упругость без утяжеления.</p>
                     </div>
+                    <img src="assets/images/product-high-amplify.jpg" alt="HIGH AMPLIFY" class="product-line-image">
                     <div class="product-line-content">
-                        <p class="product-description">Универсальная базовая линейка средств для ежедневного ухода за волосами любого типа. Формулы обогащены питательными компонентами, которые восстанавливают структуру волос, придают им здоровый блеск и облегчают расчесывание. Идеально подходит для регулярного использования и поддержания здоровья волос.</p>
+                        <p class="product-description">Профессиональная линейка средств для придания объема тонким и ослабленным волосам. Формула с протеинами и полимерами придает волосам объем, упругость и плотность без утяжеления.</p>
 
                         <div class="product-item">
-                            <img src="assets/images/logo.svg" alt="Шампунь Total Results" class="product-image">
+                            <img alt="Шампунь HIGH AMPLIFY 1л" class="product-image">
                             <div class="product-details">
-                                <h4>Шампунь Total Results</h4>
-                                <p>Для всех типов волос</p>
-                                <p>300 мл</p>
+                                <h4>HIGH AMPLIFY шампунь</h4>
+                                <p>Придает объем и упругость тонким волосам</p>
+                                <p>1 л</p>
                             </div>
-                            <p class="product-price">4 800 ₸</p>
+                            <p class="product-price">12 000 ₸</p>
                         </div>
 
                         <div class="product-item">
-                            <img src="assets/images/logo.svg" alt="Кондиционер Total Results" class="product-image">
+                            <img alt="Шампунь HIGH AMPLIFY 300мл" class="product-image">
                             <div class="product-details">
-                                <h4>Кондиционер Total Results</h4>
-                                <p>Для всех типов волос</p>
+                                <h4>HIGH AMPLIFY шампунь</h4>
+                                <p>Придает объем и упругость тонким волосам</p>
                                 <p>300 мл</p>
                             </div>
-                            <p class="product-price">5 000 ₸</p>
+                            <p class="product-price">5 500 ₸</p>
+                        </div>
+
+                        <div class="product-item">
+                            <img alt="Кондиционер HIGH AMPLIFY 1л" class="product-image">
+                            <div class="product-details">
+                                <h4>HIGH AMPLIFY кондиционер</h4>
+                                <p>Питает и придает объем без утяжеления</p>
+                                <p>1 л</p>
+                            </div>
+                            <p class="product-price">13 000 ₸</p>
+                        </div>
+
+                        <div class="product-item">
+                            <img alt="Кондиционер HIGH AMPLIFY 300мл" class="product-image">
+                            <div class="product-details">
+                                <h4>HIGH AMPLIFY кондиционер</h4>
+                                <p>Питает и придает объем без утяжеления</p>
+                                <p>300 мл</p>
+                            </div>
+                            <p class="product-price">5 800 ₸</p>
+                        </div>
+
+                        <div class="product-item">
+                            <img alt="Спрей HIGH AMPLIFY Wonder Boost 250мл" class="product-image">
+                            <div class="product-details">
+                                <h4>HIGH AMPLIFY спрей Wonder Boost</h4>
+                                <p>Мгновенно придает объем у корней</p>
+                                <p>250 мл</p>
+                            </div>
+                            <p class="product-price">6 500 ₸</p>
+                        </div>
+
+                        <div class="product-item">
+                            <img alt="Сухой шампунь HIGH AMPLIFY" class="product-image">
+                            <div class="product-details">
+                                <h4>HIGH AMPLIFY сухой шампунь</h4>
+                                <p>Освежает волосы и придает объем без мытья</p>
+                                <p>250 мл</p>
+                            </div>
+                            <p class="product-price">6 800 ₸</p>
+                        </div>
+
+                        <div class="product-item">
+                            <img alt="Ламеллярная вода HIGH AMPLIFY 200мл" class="product-image">
+                            <div class="product-details">
+                                <h4>HIGH AMPLIFY ламеллярная вода</h4>
+                                <p>Мгновенно восстанавливает и придает объем</p>
+                                <p>200 мл</p>
+                            </div>
+                            <p class="product-price">7 200 ₸</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DARK ENVY Line -->
+                <div class="product-line">
+                    <div class="product-line-header">
+                        <h3>DARK ENVY</h3>
+                        <span class="arrow">▼</span>
+                        <p class="brief-description">Для темных окрашенных волос. Формула с антиоксидантами защищает цвет и придает глубокий блеск темным волосам.</p>
+                    </div>
+                    <img src="assets/images/product-dark-envy.jpg" alt="DARK ENVY" class="product-line-image">
+                    <div class="product-line-content">
+                        <p class="product-description">Профессиональная линейка средств для ухода за темными окрашенными волосами. Формула с антиоксидантами и красными пигментами защищает цвет от выцветания, нейтрализует зеленоватый оттенок и придает глубокий блеск.</p>
+
+                        <div class="product-item">
+                            <img alt="Шампунь DARK ENVY 300мл" class="product-image">
+                            <div class="product-details">
+                                <h4>DARK ENVY шампунь</h4>
+                                <p>Защищает цвет и придает глубокий блеск</p>
+                                <p>300 мл</p>
+                            </div>
+                            <p class="product-price">5 500 ₸</p>
+                        </div>
+
+                        <div class="product-item">
+                            <img alt="Кондиционер DARK ENVY 300мл" class="product-image">
+                            <div class="product-details">
+                                <h4>DARK ENVY кондиционер</h4>
+                                <p>Питает и усиливает глубину цвета</p>
+                                <p>300 мл</p>
+                            </div>
+                            <p class="product-price">5 800 ₸</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MEGA SLEEK Line -->
+                <div class="product-line">
+                    <div class="product-line-header">
+                        <h3>MEGA SLEEK</h3>
+                        <span class="arrow">▼</span>
+                        <p class="brief-description">Для разглаживания непослушных волос. Формула с маслом ши контролирует пушистость и разглаживает волосы.</p>
+                    </div>
+                    <img src="assets/images/product-mega-sleek.jpg" alt="MEGA SLEEK" class="product-line-image">
+                    <div class="product-line-content">
+                        <p class="product-description">Профессиональная линейка средств для разглаживания непослушных и вьющихся волос. Формула с маслом ши и протеинами контролирует пушистость, разглаживает волосы и защищает от влажности.</p>
+
+                        <div class="product-item">
+                            <img alt="Шампунь MEGA SLEEK 1л" class="product-image">
+                            <div class="product-details">
+                                <h4>MEGA SLEEK шампунь</h4>
+                                <p>Разглаживает и контролирует пушистость</p>
+                                <p>1 л</p>
+                            </div>
+                            <p class="product-price">12 000 ₸</p>
+                        </div>
+
+                        <div class="product-item">
+                            <img alt="Шампунь MEGA SLEEK 300мл" class="product-image">
+                            <div class="product-details">
+                                <h4>MEGA SLEEK шампунь</h4>
+                                <p>Разглаживает и контролирует пушистость</p>
+                                <p>300 мл</p>
+                            </div>
+                            <p class="product-price">5 500 ₸</p>
+                        </div>
+
+                        <div class="product-item">
+                            <img alt="Кондиционер MEGA SLEEK 300мл" class="product-image">
+                            <div class="product-details">
+                                <h4>MEGA SLEEK кондиционер</h4>
+                                <p>Питает и разглаживает непослушные волосы</p>
+                                <p>300 мл</p>
+                            </div>
+                            <p class="product-price">5 800 ₸</p>
+                        </div>
+
+                        <div class="product-item">
+                            <img alt="Спрей MEGA SLEEK 250мл" class="product-image">
+                            <div class="product-details">
+                                <h4>MEGA SLEEK спрей</h4>
+                                <p>Защищает от влажности и контролирует пушистость</p>
+                                <p>250 мл</p>
+                            </div>
+                            <p class="product-price">6 500 ₸</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- INSTACURE Line -->
+                <div class="product-line">
+                    <div class="product-line-header">
+                        <h3>INSTACURE</h3>
+                        <span class="arrow">▼</span>
+                        <p class="brief-description">Для восстановления поврежденных волос. Формула с протеинами и керамидами мгновенно восстанавливает структуру волос.</p>
+                    </div>
+                    <img src="assets/images/product-instacure.jpg" alt="INSTACURE" class="product-line-image">
+                    <div class="product-line-content">
+                        <p class="product-description">Профессиональная линейка средств для мгновенного восстановления поврежденных волос. Формула с протеинами и керамидами восстанавливает структуру волос, укрепляет их и защищает от дальнейших повреждений.</p>
+
+                        <div class="product-item">
+                            <img alt="Шампунь INSTACURE 1л" class="product-image">
+                            <div class="product-details">
+                                <h4>INSTACURE шампунь</h4>
+                                <p>Бережно очищает и восстанавливает поврежденные волосы</p>
+                                <p>1 л</p>
+                            </div>
+                            <p class="product-price">12 000 ₸</p>
+                        </div>
+
+                        <div class="product-item">
+                            <img alt="Шампунь INSTACURE 300мл" class="product-image">
+                            <div class="product-details">
+                                <h4>INSTACURE шампунь</h4>
+                                <p>Бережно очищает и восстанавливает поврежденные волосы</p>
+                                <p>300 мл</p>
+                            </div>
+                            <p class="product-price">5 500 ₸</p>
+                        </div>
+
+                        <div class="product-item">
+                            <img alt="Кондиционер INSTACURE 1л" class="product-image">
+                            <div class="product-details">
+                                <h4>INSTACURE кондиционер</h4>
+                                <p>Питает и восстанавливает поврежденные волосы</p>
+                                <p>1 л</p>
+                            </div>
+                            <p class="product-price">13 000 ₸</p>
+                        </div>
+
+                        <div class="product-item">
+                            <img alt="Кондиционер INSTACURE 300мл" class="product-image">
+                            <div class="product-details">
+                                <h4>INSTACURE кондиционер</h4>
+                                <p>Питает и восстанавливает поврежденные волосы</p>
+                                <p>300 мл</p>
+                            </div>
+                            <p class="product-price">5 800 ₸</p>
+                        </div>
+
+                        <div class="product-item">
+                            <img alt="Спрей INSTACURE 250мл" class="product-image">
+                            <div class="product-details">
+                                <h4>INSTACURE спрей</h4>
+                                <p>Мгновенно восстанавливает и защищает волосы</p>
+                                <p>250 мл</p>
+                            </div>
+                            <p class="product-price">6 500 ₸</p>
+                        </div>
+
+                        <div class="product-item">
+                            <img alt="Спрей INSTACURE 500мл" class="product-image">
+                            <div class="product-details">
+                                <h4>INSTACURE спрей</h4>
+                                <p>Мгновенно восстанавливает и защищает волосы</p>
+                                <p>500 мл</p>
+                            </div>
+                            <p class="product-price">9 500 ₸</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FOOD FOR SOFT Line -->
+                <div class="product-line">
+                    <div class="product-line-header">
+                        <h3>FOOD FOR SOFT</h3>
+                        <span class="arrow">▼</span>
+                        <p class="brief-description">Для питания и смягчения волос. Формула с маслами и протеинами интенсивно питает и смягчает волосы.</p>
+                    </div>
+                    <img src="assets/images/product-food-for-soft.jpg" alt="FOOD FOR SOFT" class="product-line-image">
+                    <div class="product-line-content">
+                        <p class="product-description">Профессиональная линейка средств для интенсивного питания и смягчения волос. Формула с маслами и протеинами питает волосы, делает их мягкими и шелковистыми, облегчает расчесывание.</p>
+
+                        <div class="product-item">
+                            <img alt="Шампунь FOOD FOR SOFT 1л" class="product-image">
+                            <div class="product-details">
+                                <h4>FOOD FOR SOFT шампунь</h4>
+                                <p>Бережно очищает и питает волосы</p>
+                                <p>1 л</p>
+                            </div>
+                            <p class="product-price">12 000 ₸</p>
+                        </div>
+
+                        <div class="product-item">
+                            <img alt="Шампунь FOOD FOR SOFT 300мл" class="product-image">
+                            <div class="product-details">
+                                <h4>FOOD FOR SOFT шампунь</h4>
+                                <p>Бережно очищает и питает волосы</p>
+                                <p>300 мл</p>
+                            </div>
+                            <p class="product-price">5 500 ₸</p>
+                        </div>
+
+                        <div class="product-item">
+                            <img alt="Кондиционер FOOD FOR SOFT 1л" class="product-image">
+                            <div class="product-details">
+                                <h4>FOOD FOR SOFT кондиционер</h4>
+                                <p>Питает и смягчает волосы</p>
+                                <p>1 л</p>
+                            </div>
+                            <p class="product-price">13 000 ₸</p>
+                        </div>
+
+                        <div class="product-item">
+                            <img alt="Кондиционер FOOD FOR SOFT 300мл" class="product-image">
+                            <div class="product-details">
+                                <h4>FOOD FOR SOFT кондиционер</h4>
+                                <p>Питает и смягчает волосы</p>
+                                <p>300 мл</p>
+                            </div>
+                            <p class="product-price">5 800 ₸</p>
+                        </div>
+
+                        <div class="product-item">
+                            <img alt="Масло FOOD FOR SOFT 50мл" class="product-image">
+                            <div class="product-details">
+                                <h4>FOOD FOR SOFT масло</h4>
+                                <p>Интенсивно питает и придает блеск</p>
+                                <p>50 мл</p>
+                            </div>
+                            <p class="product-price">7 500 ₸</p>
+                        </div>
+
+                        <div class="product-item">
+                            <img alt="Маска FOOD FOR SOFT 500мл" class="product-image">
+                            <div class="product-details">
+                                <h4>FOOD FOR SOFT маска</h4>
+                                <p>Интенсивно питает и восстанавливает волосы</p>
+                                <p>500 мл</p>
+                            </div>
+                            <p class="product-price">8 800 ₸</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- A CURL CAN DREAM Line -->
+                <div class="product-line">
+                    <div class="product-line-header">
+                        <h3>A CURL CAN DREAM</h3>
+                        <span class="arrow">▼</span>
+                        <p class="brief-description">Для кудрявых волос. Формула с маслами и протеинами питает, увлажняет и подчеркивает естественные завитки.</p>
+                    </div>
+                    <img src="assets/images/product-curl-can-dream.jpg" alt="A CURL CAN DREAM" class="product-line-image">
+                    <div class="product-line-content">
+                        <p class="product-description">Профессиональная линейка средств для ухода за кудрявыми и вьющимися волосами. Формула с маслами и протеинами питает, увлажняет и подчеркивает естественные завитки, устраняет пушистость и придает блеск.</p>
+
+                        <div class="product-item">
+                            <img alt="Шампунь A CURL CAN DREAM 1л" class="product-image">
+                            <div class="product-details">
+                                <h4>A CURL CAN DREAM шампунь</h4>
+                                <p>Бережно очищает и питает кудрявые волосы</p>
+                                <p>1 л</p>
+                            </div>
+                            <p class="product-price">12 000 ₸</p>
+                        </div>
+
+                        <div class="product-item">
+                            <img alt="Шампунь A CURL CAN DREAM 300мл" class="product-image">
+                            <div class="product-details">
+                                <h4>A CURL CAN DREAM шампунь</h4>
+                                <p>Бережно очищает и питает кудрявые волосы</p>
+                                <p>300 мл</p>
+                            </div>
+                            <p class="product-price">5 500 ₸</p>
+                        </div>
+
+                        <div class="product-item">
+                            <img alt="Кондиционер A CURL CAN DREAM 1л" class="product-image">
+                            <div class="product-details">
+                                <h4>A CURL CAN DREAM кондиционер</h4>
+                                <p>Питает и подчеркивает кудри</p>
+                                <p>1 л</p>
+                            </div>
+                            <p class="product-price">13 000 ₸</p>
+                        </div>
+
+                        <div class="product-item">
+                            <img alt="Кондиционер A CURL CAN DREAM 300мл" class="product-image">
+                            <div class="product-details">
+                                <h4>A CURL CAN DREAM кондиционер</h4>
+                                <p>Питает и подчеркивает кудри</p>
+                                <p>300 мл</p>
+                            </div>
+                            <p class="product-price">5 800 ₸</p>
+                        </div>
+
+                        <div class="product-item">
+                            <img alt="Маска A CURL CAN DREAM 1л" class="product-image">
+                            <div class="product-details">
+                                <h4>A CURL CAN DREAM маска</h4>
+                                <p>Интенсивно питает и восстанавливает кудрявые волосы</p>
+                                <p>1 л</p>
+                            </div>
+                            <p class="product-price">14 000 ₸</p>
+                        </div>
+
+                        <div class="product-item">
+                            <img alt="Маска A CURL CAN DREAM 250мл" class="product-image">
+                            <div class="product-details">
+                                <h4>A CURL CAN DREAM маска</h4>
+                                <p>Интенсивно питает и восстанавливает кудрявые волосы</p>
+                                <p>250 мл</p>
+                            </div>
+                            <p class="product-price">7 800 ₸</p>
+                        </div>
+
+                        <div class="product-item">
+                            <img alt="Масло A CURL CAN DREAM 150мл" class="product-image">
+                            <div class="product-details">
+                                <h4>A CURL CAN DREAM масло</h4>
+                                <p>Питает, увлажняет и придает блеск кудрям</p>
+                                <p>150 мл</p>
+                            </div>
+                            <p class="product-price">7 500 ₸</p>
+                        </div>
+
+                        <div class="product-item">
+                            <img alt="Гель A CURL CAN DREAM 250мл" class="product-image">
+                            <div class="product-details">
+                                <h4>A CURL CAN DREAM гель</h4>
+                                <p>Фиксирует и подчеркивает кудри</p>
+                                <p>250 мл</p>
+                            </div>
+                            <p class="product-price">6 800 ₸</p>
+                        </div>
+
+                        <div class="product-item">
+                            <img alt="Спрей A CURL CAN DREAM 250мл" class="product-image">
+                            <div class="product-details">
+                                <h4>A CURL CAN DREAM спрей</h4>
+                                <p>Увлажняет и активирует кудри</p>
+                                <p>250 мл</p>
+                            </div>
+                            <p class="product-price">6 500 ₸</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- OIL WONDERS Line -->
+                <div class="product-line">
+                    <div class="product-line-header">
+                        <h3>OIL WONDERS</h3>
+                        <span class="arrow">▼</span>
+                        <p class="brief-description">Масла для волос. Коллекция натуральных масел для интенсивного питания и блеска волос.</p>
+                    </div>
+                    <img src="assets/images/product-oil-wonders.jpg" alt="OIL WONDERS" class="product-line-image">
+                    <div class="product-line-content">
+                        <p class="product-description">Профессиональная коллекция натуральных масел для интенсивного питания и придания блеска волосам. Легкие формулы быстро впитываются, не утяжеляют волосы и защищают их от негативных воздействий.</p>
+
+                        <div class="product-item">
+                            <img alt="Масло OIL WONDERS 150мл" class="product-image">
+                            <div class="product-details">
+                                <h4>OIL WONDERS</h4>
+                                <p>Питательное масло для всех типов волос</p>
+                                <p>150 мл</p>
+                            </div>
+                            <p class="product-price">7 500 ₸</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MIRACLE CREATOR Line -->
+                <div class="product-line">
+                    <div class="product-line-header">
+                        <h3>MIRACLE CREATOR</h3>
+                        <span class="arrow">▼</span>
+                        <p class="brief-description">Многофункциональные средства для ухода за волосами. Обеспечивают комплексный уход и защиту.</p>
+                    </div>
+                    <img src="assets/images/product-miracle-creator.jpg" alt="MIRACLE CREATOR" class="product-line-image">
+                    <div class="product-line-content">
+                        <p class="product-description">Профессиональная линейка многофункциональных средств для комплексного ухода за волосами. Обеспечивают питание, увлажнение, защиту от термического воздействия и УФ-лучей, придают блеск и облегчают расчесывание.</p>
+
+                        <div class="product-item">
+                            <img alt="Спрей MIRACLE CREATOR 190мл" class="product-image">
+                            <div class="product-details">
+                                <h4>MIRACLE CREATOR спрей</h4>
+                                <p>Многофункциональный спрей 20-в-1</p>
+                                <p>190 мл</p>
+                            </div>
+                            <p class="product-price">6 800 ₸</p>
+                        </div>
+
+                        <div class="product-item">
+                            <img alt="Маска MIRACLE CREATOR 500мл" class="product-image">
+                            <div class="product-details">
+                                <h4>MIRACLE CREATOR маска</h4>
+                                <p>Многофункциональная маска для всех типов волос</p>
+                                <p>500 мл</p>
+                            </div>
+                            <p class="product-price">8 800 ₸</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TOTAL TREAT Line -->
+                <div class="product-line">
+                    <div class="product-line-header">
+                        <h3>TOTAL TREAT</h3>
+                        <span class="arrow">▼</span>
+                        <p class="brief-description">Интенсивное восстановление волос. Глубоко питает и восстанавливает поврежденные волосы.</p>
+                    </div>
+                    <img src="assets/images/product-total-treat.jpg" alt="TOTAL TREAT" class="product-line-image">
+                    <div class="product-line-content">
+                        <p class="product-description">Профессиональная линейка средств для интенсивного восстановления поврежденных волос. Формула с протеинами и керамидами глубоко питает, восстанавливает структуру волос и защищает от дальнейших повреждений.</p>
+
+                        <div class="product-item">
+                            <img alt="Маска TOTAL TREAT 500мл" class="product-image">
+                            <div class="product-details">
+                                <h4>TOTAL TREAT маска</h4>
+                                <p>Интенсивно восстанавливает поврежденные волосы</p>
+                                <p>500 мл</p>
+                            </div>
+                            <p class="product-price">8 800 ₸</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Styling Products Line -->
+                <div class="product-line">
+                    <div class="product-line-header">
+                        <h3>Стайлинг</h3>
+                        <span class="arrow">▼</span>
+                        <p class="brief-description">Средства для укладки волос. Обеспечивают фиксацию, объем и текстуру.</p>
+                    </div>
+                    <img src="assets/images/product-styling.jpg" alt="Стайлинг" class="product-line-image">
+                    <div class="product-line-content">
+                        <p class="product-description">Профессиональная линейка средств для укладки волос. Обеспечивают различную степень фиксации, объем, текстуру и защиту от термического воздействия.</p>
+
+                        <div class="product-item">
+                            <img alt="Гель CONTROLLER GEL оранжевый 200мл" class="product-image">
+                            <div class="product-details">
+                                <h4>CONTROLLER GEL оранжевый</h4>
+                                <p>Гель для сильной фиксации</p>
+                                <p>200 мл</p>
+                            </div>
+                            <p class="product-price">6 500 ₸</p>
+                        </div>
+
+                        <div class="product-item">
+                            <img alt="Воск OVER ACHIVER 3-in-1 50мл" class="product-image">
+                            <div class="product-details">
+                                <h4>OVER ACHIVER 3-in-1 воск</h4>
+                                <p>Многофункциональный воск для укладки</p>
+                                <p>50 мл</p>
+                            </div>
+                            <p class="product-price">6 800 ₸</p>
+                        </div>
+
+                        <div class="product-item">
+                            <img alt="Спрей-воск BUILDER WAX SPRAY 250мл" class="product-image">
+                            <div class="product-details">
+                                <h4>BUILDER WAX SPRAY спрей воск</h4>
+                                <p>Спрей-воск для текстуры и фиксации</p>
+                                <p>250 мл</p>
+                            </div>
+                            <p class="product-price">6 800 ₸</p>
+                        </div>
+
+                        <div class="product-item">
+                            <img alt="Лак VAVOOM" class="product-image">
+                            <div class="product-details">
+                                <h4>ЛАК VAVOOM</h4>
+                                <p>Лак для волос сильной фиксации</p>
+                                <p>400 мл</p>
+                            </div>
+                            <p class="product-price">7 200 ₸</p>
                         </div>
                     </div>
                 </div>
@@ -173,5 +1147,10 @@
     </div>
 
     <script src="assets/js/script.js"></script>
+
+    <!-- Fixed WhatsApp Icon -->
+    <a href="https://wa.me/77058881285" class="fixed-whatsapp">
+        <img src="assets/images/whatsapp-icon.svg" alt="WhatsApp" class="fixed-whatsapp-icon">
+    </a>
 </body>
 </html>

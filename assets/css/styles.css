@@ -1,36 +1,95 @@
 /* Mobile-first styles for Matrix Colorist website */
 
+/* Top banner styles */
+.top-banner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: 0;
+    position: relative;
+}
+
+.top-banner::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
+    pointer-events: none;
+}
+
+.banner-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Author banner styles */
+.author-banner {
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 15px 10px;
+    margin-top: 0;
+    /*margin-bottom: 20px;*/
+}
+
+/* Products main image */
+.products-main-image {
+    width: 100%;
+    height: auto;
+    /*display: none;*/
+}
+
+.products-main-image.active {
+    display: block;
+}
+
+.author-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+
+.author-subtitle {
+    font-size: 0.8rem;
+    font-weight: 300;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', 'Helvetica', 'Helvetica Neue', Arial, sans-serif;
 }
 
 body {
-    background-color: #f5f5f5;
-    color: #333;
+    background-color: #B2B2B2;
+    color: #000;
     line-height: 1.6;
+    letter-spacing: 0.2px;
 }
 
 .container {
     width: 100%;
-    max-width: 480px;
+    max-width: 600px;
     margin: 0 auto;
     padding: 20px;
     background-color: white;
     min-height: 100vh;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+    border-radius: 2px;
 }
 
 /* Header styles */
 .header {
     text-align: center;
     margin-bottom: 20px;
-}
-
-.logo {
-    max-width: 150px;
-    margin-bottom: 10px;
 }
 
 .header h1 {
@@ -100,14 +159,28 @@ body {
 
 /* Catalog section */
 .catalog-section {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    padding: 0;
 }
 
 .catalog-section h2 {
-    font-size: 1.3rem;
-    margin-bottom: 15px;
-    padding-bottom: 5px;
-    border-bottom: 1px solid #ddd;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #000;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Page styles */
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+    animation: fadeIn 0.5s;
 }
 
 /* Services catalog */
@@ -118,6 +191,11 @@ body {
 .services-catalog.active, .products-catalog.active {
     display: block;
     animation: fadeIn 0.5s;
+}
+
+.services-catalog.active {
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 /* Product line */
@@ -164,6 +242,14 @@ body {
     margin-bottom: 10px;
 }
 
+/* Product line image */
+.product-line-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
 /* Product item */
 .product-item {
     display: flex;
@@ -206,28 +292,351 @@ body {
     text-align: right;
 }
 
-/* Service item */
-.service-item {
-    margin-bottom: 15px;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+/* Service Category */
+.service-category {
+    margin-bottom: 24px;
+    padding: 0;
+    border: 0.1px solid black;
+    border-radius: 9px;
+    background-color: #FFFFFF;
+    width: 100%;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+
+.category-title {
+    font-size: 1.01rem;
+    font-weight: 700;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    text-align: left;
+    background-color: #1F1F1F;
+    color: white;
+    padding: 20px 10px;
+    padding-left: 20px;
+    width: 100%;
+    border-bottom: 0.5px solid black;
+    border-radius: 8px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.service-list {
+    width: 100%;
+    padding: 20px;
+
+}
+
+.service-row {
+    display: flex;
+    align-items: baseline;
+    width: 100%;
+    padding: 10px 0;
+    flex-wrap: nowrap;
+    margin: 0;
+    border-bottom: 1px solid #ddd;
+    justify-content: space-between;
+}
+
+.service-row:last-child {
+    border-bottom: none;
 }
 
 .service-name {
-    font-size: 1.1rem;
-    margin-bottom: 5px;
+    font-size: 0.81rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: left;
+    white-space: normal;
+    letter-spacing: 0.6px;
+    flex: 2;
+    min-width: 0;
+    color: #333;
 }
 
-.service-description {
-    font-size: 0.9rem;
-    color: #666;
-    margin-bottom: 10px;
+.service-dots {
+    flex: 0.5;
+    height: 1px;
+    margin: 0 8px;
+    min-width: 20px;
 }
 
 .service-price {
     font-weight: bold;
     text-align: right;
+    white-space: nowrap;
+    min-width: 90px;
+    /*flex: 1;*/
+    color: #333;
+}
+
+.service-price::after {
+    content: " ₸";
+}
+
+.service-description {
+    font-size: 0.71rem;
+    color: #333;
+    margin-bottom: 12px;
+    margin-left: 12px;
+    font-style: normal;
+    font-weight: 300;
+    width: 100%;
+    text-align: left;
+    letter-spacing: 0.3px;
+}
+
+.service-description-inline {
+    font-size: 0.61rem;
+    color: #333;
+    font-style: normal;
+    font-weight: 300;
+    text-transform: none;
+    letter-spacing: 0.3px;
+    margin-left: 1px;
+    white-space: nowrap;
+}
+
+/* Fixed WhatsApp Icon */
+.fixed-whatsapp {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: #cf0030; /* Burgundy color */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    animation: fadeIn 0.5s;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.fixed-whatsapp:hover {
+    transform: scale(1.1);
+    background-color: #c1002d; /* Slightly lighter burgundy on hover */
+}
+
+.fixed-whatsapp-icon {
+    width: 47px;
+    height: 47px;
+    filter: brightness(0) invert(1); /* Make the icon white */
+}
+
+/* Carousel Styles */
+.carousel-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3px;
+    padding-bottom: 3px;
+    letter-spacing: 1px;
+}
+
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%; /* Will be overridden by specific classes */
+}
+
+.carousel-slide {
+    width: 100%; /* Will be overridden by specific classes */
+    flex-shrink: 0;
+}
+
+/* For 2 slides */
+#carousel-6 .carousel-track {
+    width: 200%; /* 100% * 2 slides */
+}
+
+#carousel-6 .carousel-slide {
+    width: 50%; /* 100% / 2 slides */
+}
+
+/* For 3 slides */
+#carousel-2 .carousel-track {
+    width: 300%; /* 100% * 3 slides */
+}
+
+#carousel-2 .carousel-slide {
+    width: 33.333%; /* 100% / 3 slides */
+}
+
+/* For 4 slides */
+#carousel-5 .carousel-track {
+    width: 400%; /* 100% * 4 slides */
+}
+
+#carousel-5 .carousel-slide {
+    width: 25%; /* 100% / 4 slides */
+}
+
+/* For 5 slides */
+#carousel-4 .carousel-track {
+    width: 500%; /* 100% * 5 slides */
+}
+
+#carousel-4 .carousel-slide {
+    width: 20%; /* 100% / 5 slides */
+}
+
+/* For 6 slides */
+#carousel-1 .carousel-track, #carousel-3 .carousel-track {
+    width: 600%; /* 100% * 6 slides */
+}
+
+#carousel-1 .carousel-slide, #carousel-3 .carousel-slide {
+    width: 16.666%; /* 100% / 6 slides */
+}
+
+.carousel-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+}
+
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.carousel-indicator {
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.carousel-indicator.active {
+    background-color: #000;
+}
+
+.carousel-arrow, .carousel-arrow-left {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s;
+}
+
+.carousel-arrow {
+    right: 10px;
+}
+
+.carousel-arrow-left {
+    left: 10px;
+}
+
+.carousel-arrow:hover, .carousel-arrow-left:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-arrow::after {
+    content: "›";
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.carousel-arrow-left::after {
+    content: "‹";
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Menu Icon Styles */
+.menu-icon {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.menu-icon-bar {
+    width: 100%;
+    height: 3px;
+    background-color: #000;
+    border-radius: 3px;
+    transition: all 0.3s;
+}
+
+.menu-icon.active .menu-icon-bar:nth-child(1) {
+    transform: translateY(11px) rotate(45deg);
+}
+
+.menu-icon.active .menu-icon-bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-icon.active .menu-icon-bar:nth-child(3) {
+    transform: translateY(-11px) rotate(-45deg);
+}
+
+.menu-dropdown {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100vh;
+    background-color: #000;
+    z-index: 1000;
+    transition: right 0.3s;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.menu-dropdown.active {
+    right: 0;
+}
+
+.menu-dropdown ul {
+    list-style: none;
+    padding: 60px 0 0 0;
+}
+
+.menu-dropdown li {
+    padding: 15px 20px;
+    border-bottom: 1px solid #333;
+}
+
+.menu-dropdown a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: block;
+}
+
+.menu-dropdown a:hover {
+    color: #ccc;
 }
 
 /* Animations */
@@ -239,4 +648,9 @@ body {
 @keyframes slideDown {
     from { max-height: 0; opacity: 0; }
     to { max-height: 1000px; opacity: 1; }
+}
+
+@keyframes slideLeft {
+    from { transform: translateX(0); }
+    to { transform: translateX(-25%); }
 }
