@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Hide banners on services page
         topBanner.style.display = 'none';
-        authorBanner.style.display = 'none';
+        // authorBanner.style.display = 'none';
 
         // Hide products main image
         // productsMainImage.classList.remove('active');
