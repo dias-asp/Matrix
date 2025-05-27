@@ -44,6 +44,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Setup product line expandable sections
     setupProductLines();
 
+    // Setup gamma filtering
+    setupGammaFiltering();
+
     showMainPage();
 
     // Functions
@@ -58,6 +61,10 @@ document.addEventListener('DOMContentLoaded', function() {
         // Show banners on main page
         topBanner.style.display = 'flex';
         authorBanner.style.display = 'block';
+
+        // Add main-page-active class to body
+        document.body.classList.add('main-page-active');
+        document.body.classList.remove('products-page-active');
 
         // Hide products main image
         // productsMainImage.classList.remove('active');
@@ -81,6 +88,10 @@ document.addEventListener('DOMContentLoaded', function() {
         topBanner.style.display = 'none';
         // authorBanner.style.display = 'none';
 
+        // Add products-page-active class to body to apply the same font size as products page
+        document.body.classList.add('products-page-active');
+        document.body.classList.remove('main-page-active');
+
         // Hide products main image
         // productsMainImage.classList.remove('active');
     }
@@ -103,6 +114,10 @@ document.addEventListener('DOMContentLoaded', function() {
         topBanner.style.display = 'none';
         authorBanner.style.display = 'block';
 
+        // Add products-page-active class to body
+        document.body.classList.add('products-page-active');
+        document.body.classList.remove('main-page-active');
+
         // Show products main image
         // productsMainImage.classList.add('active');
         productsMainImage.style.display = 'block';
@@ -124,6 +139,10 @@ document.addEventListener('DOMContentLoaded', function() {
         // productsMainImage.classList.remove('active');
         productsMainImage.style.display = 'none';
 
+        // Remove page-specific classes from body
+        document.body.classList.remove('main-page-active');
+        document.body.classList.remove('products-page-active');
+
         // menuDropdown.classList.remove('active');
         // menuDropdown.style.display = 'none';
         // menuIcon.classList.add('active');
@@ -135,17 +154,19 @@ document.addEventListener('DOMContentLoaded', function() {
         productLineHeaders.forEach(header => {
             // console.log(header);
             header.addEventListener('click', function() {
-                // Toggle the active class on the content
-                const _ = this.nextElementSibling;
-                const content = _.nextElementSibling;
+                // Get the parent product-line element
+                const productLine = this.closest('.product-line');
+
+                // Toggle the active class on the content (now it's the next sibling of the arrow)
+                const content = productLine.querySelector('.product-line-content');
                 content.classList.toggle('active');
 
-                // Update the arrow icon
-                const arrow = this.querySelector('.arrow');
+                // Update the arrow icon (now it's a direct child of product-line)
+                const arrow = productLine.querySelector('.arrow');
                 if (content.classList.contains('active')) {
-                    arrow.textContent = '▲';
+                    arrow.classList.add('up');
                 } else {
-                    arrow.textContent = '▼';
+                    arrow.classList.remove('up');
                 }
             });
         });
@@ -276,13 +297,146 @@ document.addEventListener('DOMContentLoaded', function() {
             menuDropdown.classList.remove('active');
         });
 
-        // Products link
+        // Products link - show products page but don't toggle submenu
         menuProducts.addEventListener('click', (e) => {
-            e.preventDefault();
-            showProductsPage();
-            menuIcon.classList.remove('active');
-            menuDropdown.classList.remove('active');
+            // Only prevent default and show products page if it's not a submenu toggle
+            if (!e.target.classList.contains('has-submenu')) {
+                e.preventDefault();
+                showProductsPage();
+                menuIcon.classList.remove('active');
+                menuDropdown.classList.remove('active');
+            }
+        });
+
+        // Setup submenu toggling on click
+        setupSubmenuToggle();
+    }
+
+    // Function to setup submenu toggling on click
+    function setupSubmenuToggle() {
+        // Find all elements with has-submenu class
+        const submenuParents = document.querySelectorAll('.has-submenu');
+
+        submenuParents.forEach(parent => {
+            parent.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation(); // Prevent event from bubbling up
+
+                // Check if the click was on the arrow (pseudo-element)
+                const rect = this.getBoundingClientRect();
+                const isClickOnArrow = (e.clientX > rect.right - 30); // Assuming arrow is within 30px from right edge
+
+                // For the main Products link
+                if (this.id === 'menu-products') {
+                    if (isClickOnArrow) {
+                        // If clicking on the arrow, toggle the submenu
+                        const submenu = this.nextElementSibling;
+                        if (submenu) {
+                            submenu.classList.toggle('active');
+                        }
+                    } else {
+                        // If clicking on the text, show products page
+                        showProductsPage();
+                        menuIcon.classList.remove('active');
+                        menuDropdown.classList.remove('active');
+                    }
+                } 
+                // For the Gamma link
+                else if (this.classList.contains('submenu-category-link')) {
+                    // For Gamma, always toggle the submenu
+                    const submenu = this.nextElementSibling;
+                    if (submenu) {
+                        submenu.classList.toggle('active');
+                    }
+                }
+            });
         });
     }
 
+    // Function to setup gamma filtering
+    function setupGammaFiltering() {
+        const gammaFilters = document.querySelectorAll('.gamma-filter');
+        const productLines = document.querySelectorAll('.product-line');
+        const allProductsLink = document.getElementById('menu-products');
+
+        // Function to extract gamma from product line
+        function getProductLineGamma(productLine) {
+            // Try to get gamma from image src
+            const img = productLine.querySelector('.product-line-image');
+            if (img && img.src) {
+                const src = img.src;
+                // Check for each gamma in the src
+                const gammas = [
+                    'food-for-soft', 'instacure', 'curl', 'color-obsessed', 
+                    'glow-mania', 'high-amplify', 'miracle-creator', 'brass-off', 
+                    'so-silver', 'keep-me-vivid', 'dark-envy', 'mega-sleek', 
+                    'unbreak-my-blonde', 'oil-wonders'
+                ];
+
+                for (const gamma of gammas) {
+                    if (src.includes(gamma)) {
+                        return gamma;
+                    }
+                }
+            }
+
+            // If not found in image, try to get from header text
+            const header = productLine.querySelector('.product-line-header h3');
+            if (header) {
+                const text = header.textContent.toLowerCase();
+                if (text.includes('food for soft')) return 'food-for-soft';
+                if (text.includes('instacure') && !text.includes('pre-bonded')) return 'instacure';
+                if (text.includes('instacure') && text.includes('pre-bonded')) return 'instacure-bond';
+                if (text.includes('curl')) return 'curl';
+                if (text.includes('color obsessed')) return 'color-obsessed';
+                if (text.includes('glow mania')) return 'glow-mania';
+                if (text.includes('high amplify')) return 'high-amplify';
+                if (text.includes('miracle creator')) return 'miracle-creator';
+                if (text.includes('brass off')) return 'brass-off';
+                if (text.includes('so silver')) return 'so-silver';
+                if (text.includes('keep me vivid')) return 'keep-me-vivid';
+                if (text.includes('dark envy')) return 'dark-envy';
+                if (text.includes('mega sleek')) return 'mega-sleek';
+                if (text.includes('unbreak my blonde')) return 'unbreak-my-blonde';
+                if (text.includes('oil wonders')) return 'oil-wonders';
+            }
+
+            return null;
+        }
+
+        // Function to filter product lines by gamma
+        function filterProductsByGamma(gamma) {
+            productLines.forEach(productLine => {
+                const productGamma = getProductLineGamma(productLine);
+                if (gamma === null || productGamma === gamma) {
+                    productLine.classList.remove('filtered-out');
+                } else {
+                    productLine.classList.add('filtered-out');
+                }
+            });
+        }
+
+        // Add event listeners to gamma filters
+        gammaFilters.forEach(filter => {
+            filter.addEventListener('click', function(e) {
+                e.preventDefault();
+                const gamma = this.getAttribute('data-gamma');
+                filterProductsByGamma(gamma);
+
+                // Close menu
+                menuIcon.classList.remove('active');
+                menuDropdown.classList.remove('active');
+
+                // Show products page
+                showProductsPage();
+            });
+        });
+
+        // Reset filter when clicking on main Products link
+        allProductsLink.addEventListener('click', function(e) {
+            // The original event listener will show the products page
+            // We just need to reset the filter
+            filterProductsByGamma(null);
+        });
+    }
 });
