@@ -40,6 +40,42 @@
     /*margin-bottom: 20px;*/
 }
 
+/* Main navigation buttons */
+.main-nav-buttons {
+    display: none; /* Hidden by default */
+    justify-content: center;
+    gap: 20px;
+    padding: 15px;
+    background-color: #000;
+    width: 100%;
+}
+
+/* Show buttons only on main page */
+body.main-page-active .main-nav-buttons {
+    display: flex;
+}
+
+.main-nav-button {
+    padding: 10px 17px;
+    background-color: white; /* White background */
+    color: black; /* Black text */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    min-width: 120px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for elegant look */
+}
+
+.main-nav-button:hover {
+    background-color: #f5f5f5; /* Light gray on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
 /* Products main image */
 .products-main-image {
     width: 100%;
@@ -49,6 +85,24 @@
 
 .products-main-image.active {
     display: block;
+}
+
+/* Breadcrumb path styles */
+.breadcrumb-path {
+    width: 100%;
+    text-align: left;
+    font-size: 0.9rem;
+    padding: 0 10px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    color: #333;
+    background-color: #fff;
+    display: none;
+    z-index: 1000; /* Ensure it's above other elements */
+}
+
+.breadcrumb-path .final {
+    font-weight: 700;
 }
 
 .author-title {
@@ -70,7 +124,7 @@ body.products-page-active {
 .author-subtitle {
     font-size: 0.8rem;
     font-weight: 300;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 /* Montserrat font is loaded from Google Fonts in the HTML file */
@@ -84,7 +138,7 @@ body.products-page-active {
 }
 
 body {
-    background-color: #B2B2B2;
+    background-color: #ffffff;
     color: #000;
     line-height: 1.6;
     letter-spacing: 0.2px;
@@ -324,7 +378,7 @@ body.main-page-active #products-title {
     display: block;
     font-size: 0; /* Hide the text content */
     position: absolute;
-    bottom: -10px; /* Position below the card */
+    bottom: -15px; /* Position below the card */
     left: 50%;
     transform: translateX(-50%);
     transition: transform 0.3s ease;
@@ -420,6 +474,8 @@ body.main-page-active #products-title {
 .product-description {
     font-family: 'Montserrat', 'Arial', sans-serif !important;
     font-weight: normal;
+    font-size: 0.9rem;
+    margin-top: 10px;
 }
 
 .product-line-content.active {
@@ -467,7 +523,7 @@ body.main-page-active #products-title {
 }
 
 .product-details p {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     color: #666;
     margin-bottom: 5px;
 }
@@ -621,6 +677,7 @@ body.main-page-active #products-title {
     margin-bottom: 3px;
     padding-bottom: 3px;
     letter-spacing: 1px;
+    padding-top:35px;
 }
 
 .carousel-container {
@@ -629,6 +686,7 @@ body.main-page-active #products-title {
     position: relative;
     margin-bottom: 20px;
     border-radius: 5px;
+
 }
 
 .carousel-track {
@@ -810,15 +868,21 @@ body.main-page-active .menu-icon-bar {
     transition: right 0.3s;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
     overflow-y: auto;
+    padding-bottom: 0; /* Remove padding as we'll use flexbox layout */
+    display: flex;
+    flex-direction: column;
 }
 
 .menu-dropdown.active {
     right: 0;
 }
 
+
+
 .menu-dropdown ul {
     list-style: none;
     padding: 60px 0 0 0;
+    flex: 1; /* Take up available space in the flexbox layout */
 }
 
 .menu-dropdown li {
@@ -829,8 +893,13 @@ body.main-page-active .menu-icon-bar {
 .menu-dropdown a {
     color: #fff;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     display: block;
+}
+
+/* Specific style for main menu links */
+.menu-dropdown > ul > li > a {
+    font-size: 1rem;
 }
 
 .menu-dropdown a:hover {
@@ -854,11 +923,11 @@ body.main-page-active .menu-icon-bar {
 .submenu-category {
     margin: 0;
     margin-bottom: 1px;
+    margin-top: 1px;
 }
 
 .submenu-category-link {
-    color: #fff;
-    font-size: 1.1rem;
+    font-size: 1rem !important;
     margin: 0;
     padding: 0;
 }
@@ -881,7 +950,7 @@ body.main-page-active .menu-icon-bar {
 }
 
 .submenu-items a {
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: #ddd;
 }
 
@@ -899,11 +968,11 @@ body.main-page-active .menu-icon-bar {
 .has-submenu::after {
     content: "›";
     position: absolute;
-    right: 0;
-    top: 50%;
+    right: 4px;
+    top: 40%;
     transform: translateY(-50%);
     color: #fff;
-    font-size: 20px;
+    font-size: 30px;
     font-weight: bold;
 }
 
@@ -913,10 +982,92 @@ body.main-page-active .menu-icon-bar {
     animation: pulse 1.5s infinite;
 }
 
+/* WhatsApp Text */
+.whatsapp-text {
+    color: #fff;
+    font-size: 0.8rem;
+    text-align: left;
+    padding: 10px 15px;
+    margin-top: auto; /* Push to the bottom before social icons */
+    border-top: 1px solid #333;
+    background-color: #000;
+    font-weight: lighter;
+}
+
+/* Social Media Icons */
+.social-icons {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 15px;
+    border-top: 1px solid #333;
+    position: sticky; /* Will be changed by JavaScript if needed */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1002; /* Ensure it's above other elements */
+    background-color: #000; /* Match the background color of the menu-dropdown */
+}
+
+.social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #333;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.social-icon:hover {
+
+}
+
+.social-icon.whatsapp:hover {
+    background-color: #c1002d; /* Slightly lighter burgundy on hover to match fixed WhatsApp icon */
+}
+
+.social-icon.whatsapp {
+    background-color: #cf0030; /* Burgundy color to match fixed WhatsApp icon */
+}
+
+.social-icon.instagram {
+    background-color: #000000;
+}
+
+
+
+.social-icon img {
+    width: 20px;
+    height: 20px;
+    margin-top:0px;
+}
+
+.social-icon.whatsapp img {
+    filter: brightness(0) invert(1); /* Make WhatsApp icon white */
+}
+
+.whatsapp-menu-icon {
+    width: 50px;
+    height: 50px;
+    margin-right: -13px;
+    margin-top: -13px; /* Move the icon up by 5px */
+    filter: brightness(0) invert(1); /* Keep the icon white against dark background */
+}
+
+.social-icon.instagram img {
+    filter: brightness(0) invert(1); /* Keep Instagram icon white */
+    width: 24px; /* Make Instagram icon slightly bigger */
+    height: 24px;
+}
+
+
+
 @keyframes pulse {
-    0% { transform: translateY(-50%) scale(1); }
-    50% { transform: translateY(-50%) scale(1.2); }
-    100% { transform: translateY(-50%) scale(1); }
+    0% { transform: translateY(-50%) scale(1); color: #fff; }
+    50% { transform: translateY(-50%) scale(1.2); color: #cf0030; }
+    100% { transform: translateY(-50%) scale(1); color: #fff; }
 }
 
 /* Product line gamma filtering */
