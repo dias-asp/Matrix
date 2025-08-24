@@ -36,7 +36,7 @@
     text-align: center;
     padding: 0px 10px;
     padding-bottom: 5px;
-    margin-top: 15px;
+    margin-top: 0px;
     /*margin-bottom: 20px;*/
 }
 
@@ -93,7 +93,7 @@ body.main-page-active .main-nav-buttons {
     text-align: left;
     font-size: 0.9rem;
     padding: 0 10px;
-    margin-top: 15px;
+    margin-top: 0px;
     margin-bottom: 2px;
     color: #333;
     background-color: #fff;
@@ -142,7 +142,7 @@ body {
     color: #000;
     line-height: 1.6;
     letter-spacing: 0.2px;
-    padding-top: 55px; /* Add padding to prevent content from overlapping with fixed products-title */
+    padding-top: 70px; /* Add padding to prevent content from overlapping with fixed products-title */
 }
 
 /* Remove padding on main page */
